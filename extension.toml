@@ -1,0 +1,10 @@
+id = "coree"
+name = "Coree"
+version = "0.13.0-1"
+schema_version = 1
+authors = ["Michael Alexander <michael@beefsack.com>"]
+description = "Persistent memory and code intelligence for AI agents"
+repository = "https://github.com/coree-ai/zed"
+
+[context_servers.coree]
+name = "Coree"
