@@ -19,7 +19,7 @@ If you prefer to configure manually, add to your Zed `settings.json`
     "coree": {
       "command": {
         "path": "npx",
-        "args": ["--yes", "@coree-ai/coree@0.13.0", "serve"],
+        "args": ["--yes", "@coree-ai/coree@0.14.0", "serve"],
         "env": {}
       }
     }

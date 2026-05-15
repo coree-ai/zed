@@ -16,7 +16,7 @@ impl zed::Extension for CoreeExtension {
             command: "npx".to_string(),
             args: vec![
                 "--yes".to_string(),
-                "@coree-ai/coree@0.13.0".to_string(),
+                "@coree-ai/coree@0.14.0".to_string(),
                 "serve".to_string(),
             ],
             env: vec![],
