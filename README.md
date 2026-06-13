@@ -2,15 +2,9 @@
 
 Persistent memory and code intelligence for AI agents in [Zed](https://zed.dev).
 
-## Install via Extension Marketplace (recommended)
+## Install
 
-1. Open Zed and press `Ctrl+Shift+X` (Linux/Windows) or `Cmd+Shift+X` (macOS) to open the Extensions panel.
-2. Search for **Coree** and click **Install**.
-3. Restart Zed. The coree context server starts automatically.
-
-## Manual Config
-
-If you prefer to configure manually, add to your Zed `settings.json`
+Add to your Zed `settings.json`
 (`~/.config/zed/settings.json` on Linux, `~/Library/Application Support/Zed/settings.json` on macOS):
 
 ```json
@@ -19,7 +13,7 @@ If you prefer to configure manually, add to your Zed `settings.json`
     "coree": {
       "command": {
         "path": "npx",
-        "args": ["--yes", "@coree-ai/coree@0.14.0", "serve"],
+        "args": ["--yes", "@coree-ai/coree@0.14.1", "serve"],
         "env": {}
       }
     }
@@ -56,7 +50,7 @@ To use remote memory sync, set these in your shell profile and they will be inhe
 ## Version Bumping
 
 ```sh
-node scripts/bump-version.mjs 0.14.0
+node scripts/update-npx-pin.mjs 0.14.0
 ```
 
-Updates all version references in `extension.toml`, `Cargo.toml`, and `src/lib.rs`.
+Updates version references in `extension.toml`, `Cargo.toml`, and `src/lib.rs`.

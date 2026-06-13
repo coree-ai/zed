@@ -12,11 +12,12 @@ impl zed::Extension for CoreeExtension {
         _server_id: &ContextServerId,
         _project: &Project,
     ) -> Result<Command> {
+        let npx = if cfg!(windows) { "npx.cmd" } else { "npx" };
         Ok(Command {
-            command: "npx".to_string(),
+            command: npx.to_string(),
             args: vec![
                 "--yes".to_string(),
-                "@coree-ai/coree@0.14.0".to_string(),
+                "@coree-ai/coree@0.14.1".to_string(),
                 "serve".to_string(),
             ],
             env: vec![],
