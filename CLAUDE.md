@@ -2,25 +2,20 @@
 
 You are using **coree**, which provides persistent memory and code intelligence across sessions.
 
-The coree MCP server runs via `npx` and provides the tools below. Because Zed's
-context server integration does not inject coree output into your context
-automatically, you MUST call these tools yourself when you need memory or code
-context.
-
-## Every Task: Start Here
-
-Before starting a task, always call `session_context()` to load prior session
-context (pending captures, relevant memories), and `search(query)` to find code
-and memory results related to the task.
+The coree server runs via `npx` and surfaces relevant memories and code context.
+If your host supports automatic injection, context is delivered at session start
+and before each prompt -- treat that injected context as background. Otherwise,
+call `session_context()` at the start of each session and `search()` before each
+task. Use the tools below to dig deeper and to store new findings.
 
 ## Core Capabilities
 
 - **Memory Subsystem**: Stores decisions, gotchas, and architectural discoveries.
 - **Code Intelligence**: Unified search over source code and git history.
 
-## Primary Tool: `search(query)`
+## Primary Tool: `search`
 
-**ALWAYS use `search` as your primary entry point.**
+**Use `search` as your primary entry point.**
 
 - It performs a hybrid search across both memories and source code.
 - Use it before starting a task to see if there is prior context.
