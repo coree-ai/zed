@@ -13,7 +13,7 @@ Add to your Zed `settings.json`
     "coree": {
       "command": {
         "path": "npx",
-        "args": ["--yes", "@coree-ai/coree@0.15.0", "serve"],
+        "args": ["--yes", "@coree-ai/coree@0.16.0", "serve"],
         "env": {}
       }
     }
